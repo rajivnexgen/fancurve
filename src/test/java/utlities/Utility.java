@@ -30,7 +30,7 @@ public static WebElement waitVisibleElement(WebElement element,int time) {
 	//WebElement elmnt=wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(elementId)));
 	
 	return wait.until(ExpectedConditions.visibilityOf(element));
-
 }
+
 
 }

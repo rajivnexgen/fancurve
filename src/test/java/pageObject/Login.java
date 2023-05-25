@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+
 
 import fanselect.fancurve.BaseClass;
 import utlities.Utility;
@@ -86,17 +86,15 @@ public class Login extends BaseClass {
 	@FindBy(id="IDC_AUSGABE_LIST_TABLE_1_6")
 	WebElement cfmVerifyOutput;
 	
+	
+	
 	public Login() {
 		PageFactory.initElements(driver, this);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
 	}
 	
-	public void loginPage() throws InterruptedException {
-		
-		String [] cfm= {"8000"};
-		String [] st= {"650"};
-		String art_no="118560/A11";
-		int chkFlag=0;
+	public void loginMain() throws InterruptedException {
 		usLang.click();
 		userField.sendKeys("ZAFS27854");
 		passField.sendKeys("7t7rlg");
@@ -105,53 +103,10 @@ public class Login extends BaseClass {
 		Thread.sleep(8000);
 		zaBluefin.click();
 		//Thread.sleep(5000);
-		Utility.waitClickableElement(btnFanSel, 10).click();
-		
-		Select dropdown =Utility.dropDown("VOLUMENSTROM_UNIT");
-		
-		dropdown.selectByValue("ZA_CFM");
-		tot_st.click();
-		Thread.sleep(1000);
-		
-		dropdown =Utility.dropDown("TOTALDRUCK_UNIT");
-		dropdown.selectByValue("ZA_PA");
-		// loop started
-		for(int i=0;i<cfm.length;i++) {
-			
-		airVolume.clear();
-		airVolume.sendKeys(cfm[i]);
-		stEdit.clear();
-		stEdit.sendKeys(st[i]);
-		addSearchCr.click();
-		Utility.waitVisibleElement(artEdit, 10);
-		artEdit.clear();
-		artEdit.sendKeys(art_no);
-		
-		search.click();
-		Thread.sleep(2000);
-		System.out.println("input is "+cfm[i]);
-		System.out.println("Output is"+cfmVerify.getText().replace(".0", ""));
-		Assert.assertEquals(cfm[i], cfmVerify.getText().replace(".0", ""));
-		fanSel.click();
-		nextPage.click();
-		Utility.waitVisibleElement(driver.findElement(By.id("CHART1")), 10);
-		Utility.waitVisibleElement(driver.findElement(By.xpath("//a[@tabpanel='IDC_TAB_AUSGABE']")), 10).click();//output link
-		if(chkFlag==0) {
-		chooseChapter.click();
-		genDescChk.click();
-		wreDiagChk.click();
-		drawChk.click();
-		sysChk.click();
-		}
-		chkFlag=1;
-		Assert.assertEquals(cfm[i], cfmVerifyOutput.getText().replace(".0", ""));
-		// rtf button click
-		Utility.waitVisibleElement(rtfBtn, 7).click();
-		Thread.sleep(4000);
-		fanSelButton.click();
-		}//for loop end
-	
+		Utility.waitClickableElement(btnFanSel, 10).click();	
 	}
+	
+	
 	
 	
 	

@@ -1,16 +1,712 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="31" passed="30" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-20T11:25:11 IST" name="Default suite" finished-at="2023-05-20T11:26:47 IST" duration-ms="95847">
+  <suite started-at="2023-05-24T14:32:55 IST" name="Default suite" finished-at="2023-05-24T14:34:43 IST" duration-ms="107976">
     <groups>
     </groups>
-    <test started-at="2023-05-20T11:25:11 IST" name="Default test" finished-at="2023-05-20T11:26:47 IST" duration-ms="95847">
+    <test started-at="2023-05-24T14:32:55 IST" name="Default test" finished-at="2023-05-24T14:34:43 IST" duration-ms="107976">
       <class name="test.TestCase1">
-        <test-method signature="test1()[pri:0, instance:test.TestCase1@21282ed8]" started-at="2023-05-20T11:25:11 IST" name="test1" finished-at="2023-05-20T11:26:47 IST" duration-ms="95704" status="PASS">
+        <test-method is-config="true" signature="test1()[pri:0, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:32:35 IST" name="test1" finished-at="2023-05-24T14:32:55 IST" duration-ms="19442" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:32:56 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:01 IST" duration-ms="4963" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4300]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:01 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:10 IST" duration-ms="9031" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7300]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116879]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [7300] but found [7222.9]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [7300] but found [7222.9]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:655)
+at org.testng.Assert.assertEquals(Assert.java:665)
+at pageObject.FanDetail.search(FanDetail.java:146)
+at test.TestCase1.test2(TestCase1.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:10 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:14 IST" duration-ms="3652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7000]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116879]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:14 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:18 IST" duration-ms="3833" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4083]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:18 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:21 IST" duration-ms="3286" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3200]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:21 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:25 IST" duration-ms="3316" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5800]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:25 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:28 IST" duration-ms="3141" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5125]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:28 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:32 IST" duration-ms="3826" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3340]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:32 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:34 IST" duration-ms="2579" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2350]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:34 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:37 IST" duration-ms="2960" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4197]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:37 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:40 IST" duration-ms="2625" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4350]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:40 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:42 IST" duration-ms="2628" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3320]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:42 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:45 IST" duration-ms="2602" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4150]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:45 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:48 IST" duration-ms="2645" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3524]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:48 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:51 IST" duration-ms="3770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5200]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:51 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:55 IST" duration-ms="3253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3524]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:55 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:33:58 IST" duration-ms="3248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:33:58 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:02 IST" duration-ms="3851" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4330]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:02 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:04 IST" duration-ms="2086" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4330]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:04 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:07 IST" duration-ms="3277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4092]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:07 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:10 IST" duration-ms="3252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5800]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:10 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:17 IST" duration-ms="6586" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4100]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:17 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:20 IST" duration-ms="2667" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3656]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:20 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:22 IST" duration-ms="2101" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3656]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:22 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:25 IST" duration-ms="2856" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3600]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:25 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:28 IST" duration-ms="3171" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3200]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:28 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:30 IST" duration-ms="2636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4500]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:30 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:33 IST" duration-ms="2651" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3500]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:33 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:36 IST" duration-ms="3261" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5200]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116876]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:36 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:39 IST" duration-ms="3226" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4159]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method signature="test2(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.TestCase1@4b741d6d]" started-at="2023-05-24T14:34:39 IST" name="test2" data-provider="excelData" finished-at="2023-05-24T14:34:43 IST" duration-ms="3119" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2400]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[700]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[116874]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
       </class> <!-- test.TestCase1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
